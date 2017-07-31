@@ -12,14 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let nyStore: PizzaStore = NYPizzaStore()
+        let chicagoStore: PizzaStore = ChicagoPizzaStore()
+        
+        let pizza1 = nyStore.orderPizza(type: "cheese")
+        print(pizza1.name)
+        
+        let pizza2 = chicagoStore.orderPizza(type: "cheese")
+        print(pizza2.name)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 
