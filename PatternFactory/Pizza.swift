@@ -11,12 +11,12 @@ import Foundation
 class Pizza {
     
     var name: String = ""
-    var dough: String = ""
-    var sauce: String = ""
+    var dough: Dough?
+    var cheese: Cheese?
     var toppings = [String]()
     
     func prepare() {
-        print("prepare")
+        assert(false, "This prepare method must be implemented")
     }
     
     func bake() {
@@ -34,52 +34,50 @@ class Pizza {
 }
 
 class NYStyleCheesePizza: Pizza {
-    override init() {
+    
+    var ingredientFactory: PizzaIngredientFactory?
+    
+    init(ingredientFactory: PizzaIngredientFactory) {
         super.init()
+        self.ingredientFactory = ingredientFactory
         name = "Ny Style Sauce and Cheese Pizza"
-        dough = "Thin Crust Dough"
-        sauce = "Marinara Sauce"
-        
         toppings.append("Grated Reggiano Cheese")
     }
-}
-
-class NYStyleVeggiePizza: Pizza {
     
-}
-
-class NYStyleClamPizza: Pizza {
-    
-}
-
-class NYStylePepperoniPizza: Pizza {
+    override func prepare() {
+        print("Preparing", name)
+        dough = ingredientFactory?.createDough()
+        guard let nyDough = dough else { print("preparing nyDough error"); return }
+        print("preparing dough :", nyDough)
+        cheese = ingredientFactory?.createCheese()
+        guard let nyCheese = cheese else { print("preparing nyCheese error"); return }
+        print("preparing cheese :", nyCheese)
+    }
     
 }
 
 class ChicagoStyleCheesePizza: Pizza {
-    override init() {
+    
+    var ingredientFactory: PizzaIngredientFactory?
+    
+    init(ingredientFactory: PizzaIngredientFactory) {
         super.init()
-        name = "Chicago Style Deep Dish Cheese Pizza"
-        dough = "Extra Thick Crust Dough"
-        sauce = "Plum Tomato Sauce"
-        
+        self.ingredientFactory = ingredientFactory
+        name = "Chicago Style Sauce and Cheese Pizza"
         toppings.append("Shredded Mozzarella Cheese")
+    }
+    
+    override func prepare() {
+        print("Preparing", name)
+        dough = ingredientFactory?.createDough()
+        guard let ccDough = dough else { print("preparing ccDough error"); return }
+        print("preparing dough :", ccDough)
+        cheese = ingredientFactory?.createCheese()
+        guard let ccCheese = cheese else { print("preparing ccCheese error"); return }
+        print("preparing cheese :", ccCheese)
     }
     
     override func cut() {
         print("Cutting the pizza into square slices")
     }
-
-}
-
-class ChicagoStyleVeggiePizza: Pizza {
-    
-}
-
-class ChicagoStyleClamPizza: Pizza {
-    
-}
-
-class ChicagoStylePepperoniPizza: Pizza {
-    
 }

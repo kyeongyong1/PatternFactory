@@ -30,36 +30,32 @@ class PizzaStore {
 
 class NYPizzaStore: PizzaStore {
     override func createPizza(type: String) -> Pizza {
+        
+        var pizza: Pizza?
+        let ingredientFactory = NYPizzaIngredientFactory()
+        
         if type == "cheese" {
-            return NYStyleCheesePizza()
-        } else if type == "veggie" {
-            return NYStyleVeggiePizza()
-        } else if type == "clam" {
-            return NYStyleClamPizza()
-        } else if type == "pepperoni" {
-            return NYStylePepperoniPizza()
+            pizza = NYStyleCheesePizza(ingredientFactory: ingredientFactory)
+            guard let cheesePizza = pizza else { return Pizza() }
+            return cheesePizza
         } else {
             return Pizza()
         }
-        
     }
-    
 }
 
 class ChicagoPizzaStore: PizzaStore {
     override func createPizza(type: String) -> Pizza {
+        
+        var pizza: Pizza?
+        let ingredientFactory = ChicagoIngredientFactory()
+        
         if type == "cheese" {
-            return ChicagoStyleCheesePizza()
-        } else if type == "veggie" {
-            return ChicagoStyleVeggiePizza()
-        } else if type == "clam" {
-            return ChicagoStyleClamPizza()
-        } else if type == "pepperoni" {
-            return ChicagoStylePepperoniPizza()
+            pizza = ChicagoStyleCheesePizza(ingredientFactory: ingredientFactory)
+            guard let cheesePizza = pizza else { return Pizza() }
+            return cheesePizza
         } else {
             return Pizza()
         }
-        
     }
-    
 }

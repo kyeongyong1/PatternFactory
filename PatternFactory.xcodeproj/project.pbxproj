@@ -16,6 +16,7 @@
 		9B0663581F2F779300C6B389 /* PatternFactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0663571F2F779300C6B389 /* PatternFactoryUITests.swift */; };
 		9B0663661F2F783600C6B389 /* PizzaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0663651F2F783600C6B389 /* PizzaStore.swift */; };
 		9B0663681F2F797F00C6B389 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0663671F2F797F00C6B389 /* Pizza.swift */; };
+		9B0A37B01F32060900D62C2E /* PizzaIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0A37AF1F32060900D62C2E /* PizzaIngredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9B0663591F2F779300C6B389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B0663651F2F783600C6B389 /* PizzaStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaStore.swift; sourceTree = "<group>"; };
 		9B0663671F2F797F00C6B389 /* Pizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		9B0A37AF1F32060900D62C2E /* PizzaIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaIngredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				9B0663391F2F779300C6B389 /* ViewController.swift */,
 				9B0663651F2F783600C6B389 /* PizzaStore.swift */,
 				9B0663671F2F797F00C6B389 /* Pizza.swift */,
+				9B0A37AF1F32060900D62C2E /* PizzaIngredient.swift */,
 				9B06633B1F2F779300C6B389 /* Main.storyboard */,
 				9B06633E1F2F779300C6B389 /* Assets.xcassets */,
 				9B0663401F2F779300C6B389 /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 			files = (
 				9B0663681F2F797F00C6B389 /* Pizza.swift in Sources */,
 				9B0663661F2F783600C6B389 /* PizzaStore.swift in Sources */,
+				9B0A37B01F32060900D62C2E /* PizzaIngredient.swift in Sources */,
 				9B06633A1F2F779300C6B389 /* ViewController.swift in Sources */,
 				9B0663381F2F779300C6B389 /* AppDelegate.swift in Sources */,
 			);
@@ -524,6 +528,7 @@
 				9B06635E1F2F779300C6B389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B06635F1F2F779300C6B389 /* Build configuration list for PBXNativeTarget "PatternFactoryTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				9B0663611F2F779300C6B389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B0663621F2F779300C6B389 /* Build configuration list for PBXNativeTarget "PatternFactoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				9B0663641F2F779300C6B389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
